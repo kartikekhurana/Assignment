@@ -11,7 +11,7 @@ const PORT = 3000;
 
 //middlewares
 app.use(cors({
-  origin: ["https://assignment-rose-five.vercel.app"], 
+ origin: ["https://assignment-nine-iota-12.vercel.app"], 
   credentials: true
 }));
 app.use(express.json());
