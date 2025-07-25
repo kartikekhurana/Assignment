@@ -7,6 +7,9 @@
 
 ---
 
+“ Note: Docker setup is included but may not work properly on M1/M2 chips due to Vite/rollup bugs. You can run the project locally as per instructions.”
+
+
 ## 🚀 Features
 
 ### ✅ Day 1:
