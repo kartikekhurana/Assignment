@@ -1,0 +1,41 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Tenant {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String
+  timezone     String
+  isPipelineOn Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  sourceConfig SourceConfig?
+}
+
+model SourceConfig {
+  id        Int     @id @default(autoincrement())
+  host      String
+  port      Int
+  username  String
+  password  String
+  tenantId  Int     @unique
+  tenant    Tenant  @relation(fields: [tenantId], references: [id])
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  role     Role
+}
+
+enum Role {
+  ADMIN
+  VIEWER
+}

@@ -1,0 +1,18 @@
+# Node
+node_modules
+*.log
+.env
+*.sqlite
+package-lock.json
+
+# Docker
+*.pid
+*.tar
+*.sock
+
+# System
+.DS_Store
+
+# Vite
+.vite
+.vite-temp
