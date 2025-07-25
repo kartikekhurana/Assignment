@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import OnBoarding from "./pages/OnBoarding";
 import SourceConfig from "./pages/SourceConfig";
-import ProtectedRoute from "./pages/protectedRoute";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
