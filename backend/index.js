@@ -20,6 +20,10 @@ app.use("/api/source-config", sourceConfigRoutes);
 app.use("/api/pipeline", pipelineRoutes);
 app.use("/api", loginRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
+
 app.listen(PORT || 3000, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
