@@ -10,7 +10,10 @@ const app = express();
 const PORT = 3000;
 
 //middlewares
-app.use(cors());
+app.use(cors({
+  origin: ["https://assignment-rose-five.vercel.app"], 
+  credentials: true
+}));
 app.use(express.json());
 dotenv.config();
 
